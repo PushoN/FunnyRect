@@ -3,7 +3,7 @@
     /// <summary>
     /// Controller interface
     /// </summary>
-    public interface IFunnyRectController
+    public interface IFunnyRectPresenter
     {
         #region Methods
 

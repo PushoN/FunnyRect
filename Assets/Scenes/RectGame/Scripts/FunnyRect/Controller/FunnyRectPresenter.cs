@@ -8,7 +8,7 @@ namespace BringMvc.RectGame.Controllers
     /// <summary>
     /// Controller implementation
     /// </summary>
-    public class FunnyRectController : IFunnyRectController
+    public class FunnyRectPresenter : IFunnyRectPresenter
     {
         #region Fields
 
@@ -24,7 +24,7 @@ namespace BringMvc.RectGame.Controllers
 
         #region Constructors
 
-        public FunnyRectController(IFunnyRectView view)
+        public FunnyRectPresenter(IFunnyRectView view)
         {
             _view = view;
         }
@@ -84,7 +84,7 @@ namespace BringMvc.RectGame.Controllers
 
         #endregion
 
-        #region IFunnyRectController
+        #region IFunnyRectPresenter
 
         #region Methods
 

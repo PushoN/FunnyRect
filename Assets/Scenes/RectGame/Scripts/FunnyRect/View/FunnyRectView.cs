@@ -20,7 +20,7 @@ namespace BringMvc.RectGame.Views
         /// instance of controller(it prevents controller from being collected by GC),
         /// view calls Initialize() and Uninitialize()
         /// </summary>
-        private readonly IFunnyRectController _controller;
+        private readonly IFunnyRectPresenter _presenter;
 
         /// <summary>
         /// Indicates either input enable or disabled
@@ -39,7 +39,7 @@ namespace BringMvc.RectGame.Views
 
         public FunnyRectView()
         {
-            _controller = new FunnyRectController(this);
+            _presenter = new FunnyRectPresenter(this);
         }
 
         #endregion
@@ -49,12 +49,12 @@ namespace BringMvc.RectGame.Views
         public void Awake()
         {
             _animator = gameObject.GetComponent<Animator>();
-            _controller.Initialize();
+            _presenter.Initialize();
         }
 
         public void OnDestroy()
         {
-            _controller.Uninitialize();
+            _presenter.Uninitialize();
         }
 
         /// <summary>
